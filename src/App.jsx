@@ -12,12 +12,14 @@ function App() {
   }
 
   return (
-    <>
-      {view === "home" && <Home onNavigate={handleNavigate} />}
-      {view === "detail" && <RecipeDetail onNavigate={handleNavigate} />}
-      {view === "add" && <AddRecipe onNavigate={handleNavigate} />}
-      <Footer />
-    </>
+    <div className="min-h-screen bg-orange-400 font-sans leading-normal text-gray-800">
+      <div className="mx-auto max-w-6xl">
+        {view === "home" && <Home onNavigate={handleNavigate} />}
+        {view === "detail" && <RecipeDetail onNavigate={handleNavigate} />}
+        {view === "add" && <AddRecipe onNavigate={handleNavigate} />}
+        <Footer />
+      </div>
+    </div>
   );
 }
 

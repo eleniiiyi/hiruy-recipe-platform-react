@@ -1,17 +1,20 @@
 import Header from "../components/Header.jsx";
 
 function RecipeDetail({ onNavigate }) {
+  const cell = "border-b border-[#ddd] px-4 py-2 text-left";
+
   return (
     <>
       <Header title="Vegetable Soup" onNavigate={onNavigate} />
 
-      <main className="recipe-detail">
+      <main className="grid grid-cols-[1fr_2fr] items-start gap-6 p-6">
         <img
+          className="col-start-1 w-full rounded-lg"
           src="https://www.inspiredtaste.net/wp-content/uploads/2025/11/How-to-Make-Vegetable-Soup-2.jpg"
           alt="Vegetable Soup"
         />
-        <h2>Ingredients</h2>
-        <ul>
+        <h2 className="col-start-2 m-0 self-end">Ingredients</h2>
+        <ul className="col-start-2 m-0">
           <li>3 tablespoons of olive oil</li>
           <li>1 onion</li>
           <li>2 carrots</li>
@@ -23,8 +26,8 @@ function RecipeDetail({ onNavigate }) {
           <li>Ground black pepper</li>
         </ul>
 
-        <h2>Preparation Steps</h2>
-        <ol>
+        <h2 className="col-start-2 m-0 self-end">Preparation Steps</h2>
+        <ol className="col-start-2 m-0">
           <li>Gather all ingredients</li>
           <li>
             Mix onions, carrots, and celery. Adding tomato paste at this stage
@@ -48,22 +51,22 @@ function RecipeDetail({ onNavigate }) {
           <li>Taste your soup and adjust the seasonings and serve.</li>
         </ol>
 
-        <table>
+        <table className="mt-4 border-collapse">
           <tbody>
             <tr>
-              <th>Info table</th>
+              <th className={`${cell} text-primary`}>Info table</th>
             </tr>
             <tr>
-              <td>Category</td>
-              <td>Breakfast</td>
+              <td className={cell}>Category</td>
+              <td className={cell}>Breakfast</td>
             </tr>
             <tr>
-              <td>Servings</td>
-              <td>2</td>
+              <td className={cell}>Servings</td>
+              <td className={cell}>2</td>
             </tr>
             <tr>
-              <td>Prep Time</td>
-              <td>30 minutes</td>
+              <td className={cell}>Prep Time</td>
+              <td className={cell}>30 minutes</td>
             </tr>
           </tbody>
         </table>
